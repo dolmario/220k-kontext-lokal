@@ -1,0 +1,11 @@
+# Understand long context: start small and check honestly
+
+Use your existing Python3 and working local model client. This kit prepares synthetic text and checks a saved JSON answer; it makes no HTTP request and installs nothing.
+
+1. Unzip completely and inspect KONTEXT-UEBUNG.py. Run `python ./KONTEXT-UEBUNG.py prepare --output ./my-context-test --lines 50`. Existing directories are preserved. The helper records source bytes/hash, not a measured token count.
+2. Read AUFTRAG.txt. Submit its complete contents deliberately through your existing client only when model context and resources are suitable. Do not submit ERWARTET.json as the answer. Preserve the actual JSON response as ANTWORT.json.
+3. Run `python ./KONTEXT-UEBUNG.py check --directory ./my-context-test --result ./my-context-test/ANTWORT.json`. Only the exact three keys and codes pass. Swapped values, extra keys or codes merely mentioned in prose fail. Checker tests are not model answers.
+4. Bytes, lines and tokens differ. Text tokenization depends on the model; chat templates, system messages and generation also use context. Shared RAM, weights, context state, buffers and parallel slots affect usable capacity. A VRAM size alone supplies no fixed token limit.
+5. ARCHIV-BEFUND.json preserves selected fields from the author's actual2026-09-19 synthetic run:262144configured context,219962document tokens,220101prompt tokens and three correct codes. The original check used code substring presence; an additional current offline JSON audit confirms exact preserved values. No fresh inference occurred.
+6. The archive reports220097cached prompt tokens and66.382seconds. This is not cold-prefill speed evidence. Separate warm continuation from first processing. Missing cache fields mean unknown, not automatically cold. Do not clear another person's cache or restart a busy server for this exercise.
+7. Start with50neutral lines; the helper allows2..2000, not an automatic220K request. Later larger tests need their own resource confirmation and actual token accounting. Record real findings in PRUEFPROTOKOLL.csv. Retrieval of three markers is not a general reasoning, book-understanding or agent-quality guarantee. Other AMD/Mac systems were not freshly tested here.

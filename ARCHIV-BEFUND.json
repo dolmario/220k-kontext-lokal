@@ -1,0 +1,29 @@
+{
+  "model": "qwen3.8-27b-q4-voll",
+  "configured_context": 262144,
+  "document_tokens": 219962,
+  "line_count": 5730,
+  "elapsed_seconds": 66.382,
+  "expected": {
+    "anfang": "A7Q-1942-ZETA",
+    "mitte": "M8R-5501-LIMA",
+    "ende": "E3V-7720-KILO"
+  },
+  "content": "{\"anfang\":\"A7Q-1942-ZETA\",\"mitte\":\"M8R-5501-LIMA\",\"ende\":\"E3V-7720-KILO\"}",
+  "usage": {
+    "completion_tokens": 476,
+    "prompt_tokens": 220101,
+    "total_tokens": 220577,
+    "prompt_tokens_details": {
+      "cached_tokens": 220097
+    }
+  },
+  "date": "2026-09-19",
+  "original_source_sha256": "ea4adc55b9ff91307a1c1c730163c037191a1cda2a2a360a04d539d3d06dab92",
+  "archived_pass_rule": "each expected code appears as a substring; original stored passed=True",
+  "current_offline_content_audit": "JSON parsed and exact key/value equality passed",
+  "new_220k_request": false,
+  "cold_prefill_measurement": false,
+  "reasoning_transcript_not_in_public_kit": true,
+  "measured_GPU_comparison": false
+}
