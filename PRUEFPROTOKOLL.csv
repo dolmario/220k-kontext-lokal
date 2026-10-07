@@ -1,0 +1,1 @@
+date,model,quantization,backend,configured_context,slots,prompt_tokens,cached_prompt_tokens,completion_tokens,elapsed_seconds,exact_codes,free_ram,free_device_memory,limitations

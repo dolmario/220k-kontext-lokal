@@ -1,0 +1,1 @@
+Own helper, prose and synthetic archived fields: MIT License. Copyright (c)2026 Dolmario. Permission is granted to use, copy, modify, merge, publish, distribute, sublicense and sell copies while retaining this copyright and permission notice. Provided AS IS without warranty. External projects retain their own licenses.
